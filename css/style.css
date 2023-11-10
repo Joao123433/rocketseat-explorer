@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-url: url(../assets/bg-desktop.jpg);
+  --text-col: #f1f1f1;
+  --stroke-color-dark-mode: rgba(255, 255, 255, 0.50);
+  --surface-color-dark-mode: rgba(255, 255, 255, 0.10);
+  --position-switch: flex-start;
+}
+
+.white {
+  --bg-url: url(../assets/bg-desktop-light.jpg);
+  --text-col: #000;
+  --stroke-color-dark-mode: rgba(0, 0, 0, 0.50);
+  --surface-color-dark-mode: rgba(0, 0, 0, 0.05);
+  --position-switch: flex-end;
+
+}
+
+body {
+  transition: 500ms;
+  background-image: var(--bg-url); 
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+body * {
+  color: var(--text-col);
+}
+
+.container {
+  width: 588px;
+  /* height: 712px; */
+  margin: 30px 426px;
+}
+
+.profile {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile img {
+  width: 112px;
+}
+
+.profile p {
+  font-weight: 100;
+}
+
+.togle {
+  display: flex;
+  margin: 5px;
+}
+
+.switch {
+  transition: 1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: var(--position-switch);
+  width: 62px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 1px solid var(--stroke-color-dark-mode);
+  background: var(--surface-color-dark-mode);
+  backdrop-filter: blur(4px);
+  margin: auto;
+}
+
+.switch .handle {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background: var(--toggle-handle-color, #FFF);
+  /* Switch-shadow */
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.switch img {
+  display: inline-flex;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.links {
+  padding: 24px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--stroke-color-dark-mode); 
+  background: var(--surface-color-dark-mode);
+  backdrop-filter: blur(4px);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
